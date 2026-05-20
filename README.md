@@ -1,4 +1,4 @@
-# All-Optical Photonic Reservoir Computing IDS — v2
+# All-Optical Photonic Reservoir Computing IDS 
 
 A modular, high-performance simulation framework for **Terabit/s Zero-Day Attack Detection** using Silicon Microring Resonator (MRR) photonic reservoir computing.
 
