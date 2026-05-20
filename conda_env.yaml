@@ -1,0 +1,60 @@
+name: photonic_rc_ids
+# ============================================================
+#  Conda Environment — All-Optical Photonic RC-IDS (v2)
+#  Target: Windows 10/11, Python 3.12, Intel MKL / AMD BLAS
+# ============================================================
+#
+#  Create:  conda env create -f conda_env.yaml
+#  Activate: conda activate photonic_rc_ids
+#  Update:   conda env update -f conda_env.yaml --prune
+#
+channels:
+  - conda-forge        # primary: packages built with MKL linkage
+  - defaults           # fallback
+
+dependencies:
+  # ── Python runtime ─────────────────────────────────────
+  - python=3.12
+
+  # ── Core numerical stack (MKL-linked via conda-forge) ──
+  # Installing numpy via conda links against Intel MKL or
+  # OpenBLAS (whichever conda-forge selects for the platform),
+  # enabling multi-core BLAS routines for matrix operations.
+  - numpy>=1.26.0        # core tensor ops, np.memmap, linalg
+  - scipy>=1.12.0        # sparse matrices, signal processing
+
+  # ── Data handling ──────────────────────────────────────
+  - pandas>=2.2.0        # DataFrame ops, CSV chunked reading
+
+  # ── Machine Learning ───────────────────────────────────
+  # Strictly limited to DBSCAN + standard metrics as specified.
+  - scikit-learn>=1.4.0  # DBSCAN, accuracy_score, f1_score, roc_auc_score
+
+  # ── Visualisation (for script outputs) ─────────────────
+  - matplotlib>=3.8.0    # plotting MRR dynamics, mesh states
+  - seaborn>=0.13.0      # confusion matrices, heatmaps
+
+  # ── Utilities ──────────────────────────────────────────
+  - tqdm>=4.66.0         # progress bars for long data loops
+  - psutil>=5.9.0        # memory / CPU monitoring on Windows
+  - joblib>=1.3.0        # parallel processing for offline training
+
+  # ── Development / testing ──────────────────────────────
+  - pytest>=8.0.0
+  - ipykernel>=6.29.0    # Jupyter kernel for script notebooks
+
+  # ── pip-only packages (no conda equivalent needed) ─────
+  - pip
+  - pip:
+      # numexpr speeds up NumPy array expression evaluation
+      - numexpr>=2.10.0
+      # memory-profiler for tracking memmap overhead on Windows
+      - memory-profiler>=0.61.0
+
+variables:
+  # Force NumPy to use all physical CPU cores via MKL
+  MKL_NUM_THREADS: "0"        # 0 = auto-detect all cores
+  OMP_NUM_THREADS: "0"        # OpenMP threads
+  OPENBLAS_NUM_THREADS: "0"   # fallback for OpenBLAS systems
+  # Prevent Windows memory fragmentation in large array ops
+  MALLOC_TRIM_THRESHOLD_: "65536"

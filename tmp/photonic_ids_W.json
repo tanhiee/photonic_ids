@@ -1,0 +1,59 @@
+{
+  "best_lambda": 0.001,
+  "classes": [
+    "Benign",
+    "Bot",
+    "DDoS",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-Slowhttptest",
+    "DoS-slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web-Brute",
+    "Web-Injection",
+    "Web-XSS"
+  ],
+  "W_out_shape": [
+    13,
+    64
+  ],
+  "quantization": "8-bit",
+  "scaler_min": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "scaler_scale": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

@@ -1,0 +1,85 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260520162628
+Username: LAPTOP-12TSGGRV\ASUS
+RunAs User: LAPTOP-12TSGGRV\ASUS
+Configuration Name: 
+Machine: LAPTOP-12TSGGRV (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\run_all.ps1
+Process ID: 51272
+PSVersion: 5.1.26100.8457
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8457
+BuildVersion: 10.0.26100.8457
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+======================================================================
+  Unit tests
+======================================================================
+Checks confusion matrix diagonal properties. ... ok
+test_perfect_classifier (__main__.TestMetrics.test_perfect_classifier)
+Verifies accuracy calculation of a perfect predictor. ... ok
+test_full_pipeline (__main__.TestPipeline.test_full_pipeline)
+Checks fit and prediction consistency of OfflineTrainer. ... ok
+test_ridge_mac_count (__main__.TestReadout.test_ridge_mac_count)
+Checks multiply-accumulate operations counts scaling. ... ok
+test_softmax_normalised (__main__.TestReadout.test_softmax_normalised)
+Checks that output probabilities sum to 1. ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.041s
+
+OK
+  Unit tests  - OK
+======================================================================
+  01 - Single MRR
+======================================================================
+
+  01 - Single MRR  - OK
+======================================================================
+  02 - Reservoir array
+======================================================================
+
+  02 - Reservoir array  - OK
+======================================================================
+  03 - Offline train
+======================================================================
+
+  03 - Offline train  - OK
+======================================================================
+  04 - Evaluate
+======================================================================
+
+  04 - Evaluate  - OK
+======================================================================
+  05 - Ablation
+======================================================================
+
+  05 - Ablation  - OK
+======================================================================
+  06 - Zero-Day
+======================================================================
+
+  06 - Zero-Day  - OK
+======================================================================
+  07 - Capacity
+======================================================================
+
+  07 - Capacity  - OK
+======================================================================
+  08 - Deployment
+======================================================================
+
+  08 - Deployment  - OK
+======================================================================
+  09 - Adversarial
+======================================================================
+
+  09 - Adversarial  - OK
+**********************
+Windows PowerShell transcript end
+End time: 20260520162639
+**********************
